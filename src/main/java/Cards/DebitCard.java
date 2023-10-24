@@ -22,6 +22,6 @@ public class DebitCard extends BankModule implements CardModule {
         }
     }
     public Double checkBalance() {
-        return getBalance();
+        return balance;
     }
 }

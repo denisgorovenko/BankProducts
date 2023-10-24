@@ -17,7 +17,7 @@ public class TestBankProducts {
         assertEquals(200.0, creditCard.checkBalance(), 0.3);
         creditCard.replenishment(100.0);
         assertEquals(300.0, creditCard.checkBalance(), 0.3);
-        creditCard.replenishment(400.0);
+        creditCard.withdrawal(400.0);
         assertEquals(-100 , creditCard.debtRequest(),0);
     }
 
@@ -48,6 +48,7 @@ public class TestBankProducts {
         deposit.replenishment(5000.0);
         assertEquals(15000.0, deposit.checkBalance(), 0.0);
         deposit.close();
+        assertEquals(0.0, deposit.checkBalance(), 0.0);
     }
 
 }

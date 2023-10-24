@@ -12,15 +12,5 @@ public abstract class BankModule {
         this.name = name;
     }
 
-    public String getCurrency() {
-        return currency;
-    }
 
-    public String getName() {
-        return name;
-    }
-
-    public Double getBalance() {
-        return balance;
-    }
 }

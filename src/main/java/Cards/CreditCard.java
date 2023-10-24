@@ -14,6 +14,9 @@ public class CreditCard extends BankModule implements CardModule {
     }
 
     public double debtRequest(){
+        if(balance < 0) {
+            debt = balance;
+        }
         return debt;
     }
 
@@ -30,16 +33,11 @@ public class CreditCard extends BankModule implements CardModule {
     }
 
     public void withdrawal(Double amount) {
-        if(balance >= amount)
-        {
             balance -= amount;
-        } else {
-            System.out.println("Not enough money");
-        }
     }
 
     public Double checkBalance() {
-        return getBalance();
+        return balance;
     }
 
 

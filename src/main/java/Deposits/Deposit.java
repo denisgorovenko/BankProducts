@@ -10,6 +10,7 @@ public class Deposit extends BankModule implements DepositModule {
     }
 
     public void close() {
+        balance = 0.0;
         System.out.println("Your deposit is closed");
     }
 
